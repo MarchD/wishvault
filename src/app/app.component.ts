@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wishvault';
+  navigationList: { label: string, path: string }[] = [
+    {
+      label: 'Profile',
+      path: '/profile'
+    }
+  ]
 }
