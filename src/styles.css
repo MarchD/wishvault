@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-size-document: 32px;
+  --text-size-page: 28px;
+  --text-size-section: 24px;
+  --text-size-subsection: 20px;
+  --text-size-regular: 16px;
+  --text-size-caption: 12px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -14,4 +22,37 @@ li {
 a {
   color: #000;
   text-decoration: none;
+}
+
+.text-document  {
+  font-size: var(--text-size-document);
+  font-weight: 700;
+}
+
+.text-page {
+  font-size: var(--text-size-page);
+  font-weight: 700;
+}
+
+.text-section {
+  font-size: var(--text-size-section);
+  font-weight: 400;
+}
+
+.text-subsection {
+  font-size: var(--text-size-subsection);
+  font-weight: 400;
+}
+
+.text-regular {
+  font-size: var(--text-size-regular);
+}
+
+.text-regular-bold {
+  font-size: var(--text-size-regular);
+  font-weight: 500;
+}
+
+.caption {
+  font-size: var(--text-size-caption);
 }

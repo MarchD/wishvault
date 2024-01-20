@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li *ngFor="let item of navigationList">
-      <a [routerLink]="item.path">{{ item.label }}</a>
+      <a [routerLink]="item.path" class="text-subsection">{{ item.label }}</a>
     </li>
   </ul>
 </nav>
