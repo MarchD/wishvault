@@ -8,6 +8,8 @@ import { LogoComponent } from './components/icons/logo/logo.component';
 import { ListsComponent } from './pages/lists/lists.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NavComponent } from './components/nav/nav.component';
+import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
+import { UserIconComponent } from './components/icons/user-icon/user-icon.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavComponent } from './components/nav/nav.component';
     LogoComponent,
     ListsComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    UserAvatarComponent,
+    UserIconComponent
   ],
   imports: [
     BrowserModule,
