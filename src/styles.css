@@ -5,6 +5,16 @@
   --text-size-subsection: 20px;
   --text-size-regular: 16px;
   --text-size-caption: 12px;
+
+  --color-black: #000;
+  --color-grey: #7B7B7B;
+  --color-grey-7: #DEE0E3;
+  --color-grey-10: #F1F1F1;
+  --color-white: #fff;
+  --color-blue: #29A6FE;
+  --color-blue-4: #DDF1FF;
+  --color-red: #F23D35;
+  --color-red-4: #FDE0DF;
 }
 
 body {
