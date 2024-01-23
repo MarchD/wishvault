@@ -1,0 +1,14 @@
+<div
+  class="wrapper"
+  (mouseenter)="isShownEditButton = true"
+  (mouseleave)="isShownEditButton = false"
+  [ngStyle]="{'margin-right': isShownEditButton ? 0 : '40px'}"
+>
+  <p class="text-section">
+    {{ fullname }}
+  </p>
+
+  <button class="button" *ngIf="isShownEditButton">
+    <app-edit-icon ></app-edit-icon>
+  </button>
+</div>
