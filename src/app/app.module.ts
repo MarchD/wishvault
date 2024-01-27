@@ -17,6 +17,13 @@ import { EditIconComponent } from './components/icons/edit-icon/edit-icon.compon
 import { CrossIconComponent } from './components/icons/cross-icon/cross-icon.component';
 import { DoneIconComponent } from './components/icons/done-icon/done-icon.component';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +45,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

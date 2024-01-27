@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   fullname: string = 'Maryna Marynivna'
-  constructor() { }
-
+  constructor(private dataService: DataService) {}
   onChangeName(newName: string) {
     this.fullname = newName;
   }
 
   ngOnInit(): void {
+    this.dataService.getUsers().subscribe(data => {
+      console.log(data,'data')
+    });
   }
 }
