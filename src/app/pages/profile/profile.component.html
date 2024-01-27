@@ -1,7 +1,7 @@
 <div>
   <div class="wrapper">
     <app-user-avatar></app-user-avatar>
-    <app-fullname-field [fullname]="'Maryna Marynivna'"></app-fullname-field>
+    <app-fullname-field [fullname]="fullname" (onChangeFullname)="onChangeName($event)"></app-fullname-field>
   </div>
 </div>
 

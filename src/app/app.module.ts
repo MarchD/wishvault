@@ -14,6 +14,9 @@ import { EmailFieldComponent } from './pages/profile/email-field/email-field.com
 import { PasswordFieldComponent } from './pages/profile/password-field/password-field.component';
 import { FullnameFieldComponent } from './pages/profile/fullname-field/fullname-field.component';
 import { EditIconComponent } from './components/icons/edit-icon/edit-icon.component';
+import { CrossIconComponent } from './components/icons/cross-icon/cross-icon.component';
+import { DoneIconComponent } from './components/icons/done-icon/done-icon.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { EditIconComponent } from './components/icons/edit-icon/edit-icon.compon
     EmailFieldComponent,
     PasswordFieldComponent,
     FullnameFieldComponent,
-    EditIconComponent
+    EditIconComponent,
+    CrossIconComponent,
+    DoneIconComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

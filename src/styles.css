@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 .text-document  {
   font-size: var(--text-size-document);
   font-weight: 700;
@@ -65,4 +69,38 @@ a {
 
 .caption {
   font-size: var(--text-size-caption);
+}
+
+.textfield {
+  padding: 9px 16px;
+  border: 2px solid black;
+}
+
+.button {
+  padding: 4px 0 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-grey-7);
+  }
+}
+
+input {
+  padding: 9px 16px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  border: 2px solid var(--color-black);
+  outline: none;
+
+  &:focus {
+     border: 2px solid var(--color-black);
+  }
 }

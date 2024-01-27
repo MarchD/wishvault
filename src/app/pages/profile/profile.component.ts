@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  fullname: string = 'Maryna Marynivna'
   constructor() { }
+
+  onChangeName(newName: string) {
+    this.fullname = newName;
+  }
 
   ngOnInit(): void {
   }

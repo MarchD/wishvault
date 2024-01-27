@@ -2,13 +2,24 @@
   class="wrapper"
   (mouseenter)="isShownEditButton = true"
   (mouseleave)="isShownEditButton = false"
-  [ngStyle]="{'margin-right': isShownEditButton ? 0 : '40px'}"
 >
-  <p class="text-section">
+  <p class="text-section" *ngIf="!isEdit">
     {{ fullname }}
   </p>
 
-  <button class="button" *ngIf="isShownEditButton">
-    <app-edit-icon ></app-edit-icon>
+  <button class="button" *ngIf="isShownEditButton && !isEdit" (click)="isEdit = !isEdit">
+    <app-edit-icon></app-edit-icon>
   </button>
+
+  <form class="wrapper" *ngIf="isEdit" #fullnameForm="ngForm" (ngSubmit)="onSubmit(fullnameForm)">
+    <input name="fullname" [value]="fullname" type="text" [(ngModel)]="fullname">
+
+    <button class="button" type="submit" *ngIf="isEdit">
+      <app-done-icon></app-done-icon>
+    </button>
+
+    <button class="button" *ngIf="isEdit" (click)="isEdit = false">
+      <app-cross-icon></app-cross-icon>
+    </button>
+  </form>
 </div>
