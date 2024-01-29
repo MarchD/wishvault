@@ -7,18 +7,18 @@
     {{ fullname }}
   </p>
 
-  <button class="button" *ngIf="isShownEditButton && !isEdit" (click)="isEdit = !isEdit">
+  <button class="button-icon" *ngIf="isShownEditButton && !isEdit" (click)="isEdit = !isEdit">
     <app-edit-icon></app-edit-icon>
   </button>
 
   <form class="wrapper" *ngIf="isEdit" #fullnameForm="ngForm" (ngSubmit)="onSubmit(fullnameForm)">
     <input name="fullname" [value]="fullname" type="text" [(ngModel)]="fullname">
 
-    <button class="button" type="submit" *ngIf="isEdit">
+    <button class="button-icon" type="submit" *ngIf="isEdit">
       <app-done-icon></app-done-icon>
     </button>
 
-    <button class="button" *ngIf="isEdit" (click)="isEdit = false">
+    <button class="button-icon" *ngIf="isEdit" (click)="isEdit = false">
       <app-cross-icon></app-cross-icon>
     </button>
   </form>
